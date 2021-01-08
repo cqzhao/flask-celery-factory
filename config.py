@@ -5,8 +5,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
 
-    CELERY_BROKER_URL = 'amqp://guest@localhost:5672//'
-    CELERY_RESULT_BACKEND = 'amqp://'
+    broker_url = 'redis://localhost:6379/0'
+    result_backend = 'redis://localhost:6379/0'
 
     @staticmethod
     def init_app(app):

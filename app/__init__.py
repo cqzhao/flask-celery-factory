@@ -5,7 +5,7 @@ from config import config, Config
 
 
 db = SQLAlchemy()
-celery = Celery(__name__, broker=Config.CELERY_BROKER_URL)
+celery = Celery(__name__, broker=Config.broker_url)
 
 
 def create_app(config_name):

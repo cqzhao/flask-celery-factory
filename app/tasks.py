@@ -1,5 +1,6 @@
 from app import celery, db
 from .models import User
+from flask import current_app
 
 
 @celery.task
